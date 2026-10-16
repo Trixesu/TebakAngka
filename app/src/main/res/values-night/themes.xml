@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- app/src/main/res/values-night/themes.xml  (TEMA GELAP) -->
+<resources>
+    <style name="Theme.TebakAngka" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#A5B4FC</item>
+        <item name="colorOnPrimary">#1E1B4B</item>
+        <item name="colorPrimaryContainer">#312E81</item>
+        <item name="colorOnPrimaryContainer">#E0E7FF</item>
+
+        <item name="colorTertiaryContainer">#064E3B</item>
+        <item name="colorOnTertiaryContainer">#D1FAE5</item>
+
+        <item name="colorErrorContainer">#7F1D1D</item>
+        <item name="colorOnErrorContainer">#FEE2E2</item>
+
+        <item name="android:colorBackground">#0F172A</item>
+        <item name="colorSurface">#0F172A</item>
+        <item name="colorOnSurface">#E2E8F0</item>
+        <item name="colorSurfaceVariant">#1E293B</item>
+        <item name="colorOnSurfaceVariant">#CBD5E1</item>
+        <item name="colorOutline">#475569</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
