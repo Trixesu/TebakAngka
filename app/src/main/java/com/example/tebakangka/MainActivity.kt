@@ -1,5 +1,3 @@
-// Letakkan di: app/src/main/java/<package-anda>/MainActivity.kt
-// Ganti baris package di bawah sesuai nama package proyek Anda.
 package com.example.tebakangka
 
 import android.content.res.Configuration
@@ -37,7 +35,6 @@ class MainActivity : AppCompatActivity() {
     private enum class Style { NEUTRAL, SUCCESS, ERROR }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Terapkan mode tema yang tersimpan sebelum tampilan dibuat
         val prefs = getSharedPreferences("settings", MODE_PRIVATE)
         AppCompatDelegate.setDefaultNightMode(
             prefs.getInt("night_mode", AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
@@ -56,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         btnReset = findViewById(R.id.btnReset)
         btnTheme = findViewById(R.id.btnTheme)
 
-        // Pulihkan permainan setelah ganti tema (activity dibuat ulang)
         if (savedInstanceState != null) {
             secretNumber = savedInstanceState.getInt("secret")
             score = savedInstanceState.getInt("score")
@@ -103,14 +99,13 @@ class MainActivity : AppCompatActivity() {
                 Configuration.UI_MODE_NIGHT_YES
 
     private fun updateThemeIcon() {
-        // Mode gelap -> tampilkan matahari (ketuk untuk terang), sebaliknya bulan
         btnTheme.setIconResource(
             if (isNightMode()) R.drawable.ic_light_mode else R.drawable.ic_dark_mode
         )
     }
 
     private fun startNewGame() {
-        secretNumber = Random.nextInt(0, 101) // acak 0 sampai 100
+        secretNumber = Random.nextInt(0, 101)
         score = 100
         gameOver = false
         etGuess.text?.clear()
