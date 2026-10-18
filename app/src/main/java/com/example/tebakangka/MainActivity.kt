@@ -1,4 +1,3 @@
-```kotlin
 package com.example.tebakangka
 
 import android.content.res.Configuration
@@ -208,4 +207,3 @@ class MainActivity : AppCompatActivity() {
         tvResult.setTextColor(MaterialColors.getColor(tvResult, fgAttr))
     }
 }
-```
